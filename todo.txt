@@ -1,0 +1,5 @@
+- website meta description (currently "I stream and make music")
+- website title
+- og tag username
+- font
+- minecraft screenshots (16/9 aspect ratio)

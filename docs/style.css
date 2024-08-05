@@ -1,0 +1,217 @@
+html {
+    height: 100%;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@property --gradientStart {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+
+    color: white;
+    background: radial-gradient(
+        at top,
+        rgba(93, 21, 22, 1) var(--gradientStart),
+        rgba(15, 1, 14, 1) 100%
+    );
+    background-attachment: fixed;
+
+    animation-name: bg-anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes bg-anim {
+    0% {
+        --gradientStart: 0%;
+    }
+
+    100% {
+        --gradientStart: 20%;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+header {
+    position: relative;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+section {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 200px;
+    height: 200px;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+
+    position: absolute;
+    top: 0;
+    left: -100px;
+}
+
+.minecraft-screenshots {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-around;
+}
+
+.minecraft-screenshot {
+    width: 500px;
+    max-width: calc(50% - 16px);
+    min-width: 150px;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.logo-smp {
+    width: 150px;
+    height: 150px;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+section.smp-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.content-box {
+    background-color: rgba(82, 37, 37, 0.5);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.social-group {
+    min-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.social-links > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(93, 21, 22, 1);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: background-color 0.1s ease;
+}
+
+.social-links > a:hover {
+    background-color: rgb(121, 38, 39);
+}
+
+.social-links > a:active {
+    background-color: rgb(77, 14, 15);
+}
+
+.social-links > a > img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+footer {
+    padding-bottom: 24px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: rgb(170, 170, 170);
+}
+
+@media (width <= 500px) {
+    main {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .minecraft-screenshots {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    header {
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .logo-img {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .logo-img-rose {
+        width: 48px;
+        height: 48px;
+    }
+    .logo-img-text {
+        width: auto;
+        height: 64px;
+    }
+
+    .logo-smp {
+        width: 100px;
+        height: 100px;
+    }
+}
