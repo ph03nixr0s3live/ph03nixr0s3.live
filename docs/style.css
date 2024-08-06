@@ -179,6 +179,31 @@ footer {
     color: rgb(170, 170, 170);
 }
 
+a {
+    color: rgb(221, 142, 143);
+}
+
+ol > li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+small {
+    color: rgb(223, 198, 198);
+    font-style: italic;
+}
+
+code {
+    background-color: rgba(53, 41, 41, 0.75);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.copy-button {
+    font-size: 12px;
+    cursor: pointer;
+}
+
 @media (width <= 500px) {
     main {
         padding-left: 12px;
