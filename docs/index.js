@@ -9,3 +9,6 @@ async function copyToClipboard(text) {
         console.error("Failed to copy to clipboard", error);
     }
 }
+
+const copyrightYearEl = document.getElementById("copyright-year");
+copyrightYearEl.innerText = new Date().getFullYear();
